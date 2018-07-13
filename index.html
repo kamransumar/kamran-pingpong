@@ -13,7 +13,7 @@
         <h1><strong><em>PING PONG</em></strong></h1>
           <p>ping pong is a fun game you can play on this website.Give it a try below:</p>
         </div>
-    <div class="tab" >
+    <div class="tab" id="tab1">
       <button class="tablinks" onclick="openmenu(event, 'about')" id="defaultOpen">About</button>
       <button class="tablinks" onclick="openmenu(event, 'rules')" id="btn2">Rules</button>
       <button class="tablinks" onclick="openmenu(event, 'letsplay')" id="btn3">Lets Play</button>
@@ -43,16 +43,14 @@
       </ol>
     </div>
     <div id="letsplay" class="tabcontent">
-      <h3 class="text-center"><b><em>lets play</em></b></h3>
-      <form class="text-center">
-        <div class="form group">
-          <label for="input1" class="form-control" id="input1"
-          aria-describedby="numberHelp" placeholder"your name">
-        </div>
-        <button type="submit" class="btn btn-primary">ping pong!</button>
-      </form>
-    </div>
-
+        <h3 class="text-center"><b><em>lets play</em></b></h3>
+        <form id="will it pong">
+            <label for="willitpong">Enter number here</label>
+            <input type="number" class="form-control" id="form-number">
+          <button type="submit" class="btn btn-primary" id="addbutton">PINGPONG!</button>
+        </form>
+        <ul id"output"></ul>
+      </div>
     <script>
     function openmenu(evt, menuName) {
         var i, tabcontent, tablinks;

@@ -1,5 +1,5 @@
 body{
-  font-family: cursive;
+  font-family: fantasy;
 }
 .tab {
     float: left;
@@ -78,4 +78,7 @@ body{
 }
 #defaultOpen{
   background-color: grey;
+}
+#tab1{
+  font-size: 20px;
 }
