@@ -20,6 +20,7 @@ body{
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
+    height:33.3%
 }
 
 /
@@ -43,13 +44,20 @@ body{
     font-size: 20px;
 }
 #letsplay{
-  background-image: url(../img/608a00c10cd18815f18f4611b64d7d85.jpg);
-  background-position: top;
+  background-image: url(../img/Funny-Looking-Ball-Table-Tennis-Picture.jpg);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100;
+  background-size: 150;
+  background-color: black;
 }
 #about{
   background-image: url(../img/pingpong1.jpg);
+  background-position: center;
+  background-size: 100%;
+  color: orange;
+}
+#rules{
+  background-image: url(../img/how-to-clean-a-ping-pong-paddle-1.jpg);
   background-position: center;
   background-size: 100%;
   color: orange;
@@ -60,4 +68,14 @@ body{
   background-size: 50%;
   height: 400px;
   color: maroon;
+}
+#btn2{
+  background-color: lavender;
+}
+#btn3{
+  background-color: coral;
+
+}
+#defaultOpen{
+  background-color: grey;
 }
