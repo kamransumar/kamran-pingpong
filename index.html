@@ -1,35 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>pingpong</title>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-   <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <div class="jumbotron mb-0" id="jumbo1">
-    <h1><strong>PING PONG</strong></h1>
-      <p>ping pong is a fun game you can play on this website.Give it a try below:</p>
+  <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>pingpong</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+       <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+      <div class="jumbotron mb-0 text-center" id="jumbo1">
+        <h1><strong><em>PING PONG</em></strong></h1>
+          <p>ping pong is a fun game you can play on this website.Give it a try below:</p>
+        </div>
+    <div class="tab" >
+      <button class="tablinks" onclick="openmenu(event, 'about')" id="defaultOpen">About</button>
+      <button class="tablinks" onclick="openmenu(event, 'rules')" id="btn2">Rules</button>
+      <button class="tablinks" onclick="openmenu(event, 'letsplay')" id="btn2">Lets Play</button>
     </div>
-  </div>
-  <div class="jumbotron mt-0">
-    <div class="row" id="row1">
-    <div class="main">
-      <h2>Lets play</h2>
-      <h3>Rules</h3>
+
+    <div id="about" class="tabcontent">
+      <h3 class="text-center"><b><em>About pingpong !</em></b></h3>
+      <ol>
+        <li><strong>created by:</strong></li>
+      <em>Kamran Sumar</em>
+        <li><strong>Github Username/URL:</strong></li>
+        <em>kamransumar</em>
+        <li><strong>Levl 2 Test for:</strong></li>
+        <em>java</em>
+      </ol>
+
+
+    </div>
+
+    <div id="rules" class="tabcontent">
+      <h3 class="text-center"><b><em>Rules of ping pong</em></b></h3>
       <p>Ping pong will count up to your number from 1 with the following exceptions:</p>
       <ol>
         <li>Number divisible by 3 become "ping"!</li>
         <li>Number divisible by 5 become "pong"!</li>
         <li>Numbers divisible by both 3 and 5 become "pingpong!" </li>
       </ol>
+    </div>
+    <div id="letsplay" class="tabcontent">
+      <h3 class="text-center"><b><em>lets play</em></b></h3>
+      <form>
+        <div class="form group">
+          <label for="input1" class="form-control" id="input1"
+          aria-describedby="numberHelp" placeholder"your name">
+        </div>
+        <button type="submit" class="btn btn-primary">ping pong!</button>
+      </form>
+    </div>
 
+    <script>
+    function openmenu(evt, menuName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+
+    </body>
+    </html>
 
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous">
+</script>
 </html>
